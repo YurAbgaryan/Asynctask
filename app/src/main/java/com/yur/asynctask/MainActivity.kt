@@ -26,8 +26,7 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
            
 
-            Log.d("Asyctask_test_tag", "Button is clicked")
-            button.setTextColor(resources.getColor(R.color.black))
+            Log.d("TEST_TEST", "Button is clicked")
              
              Toast.makeText(this, "Showing short Toast", Toast.LENGTH_SHORT).show()
         }
