@@ -22,6 +22,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 //        progressBar = findViewById(R.id.progressBar)
         val button  = findViewById<Button>(R.id.button)
+
+        button.setOnClickListener {
+            Toast.makeText(this, "sdsd", Toast.LENGTH_SHORT).show()
+        }
+
+
         val image  = findViewById<ImageView>(R.id.image)
         val newScope = CoroutineScope(Dispatchers.Main)
 
