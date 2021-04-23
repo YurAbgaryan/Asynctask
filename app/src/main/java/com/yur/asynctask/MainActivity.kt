@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
            
 
             Log.d("TEST_TEST", "Button is clicked")
-            Log.d("this_is_completely_new_Log_tas", "inside button onclick lisener")
-            button.setTextColor(resources.getColor(R.color.red))
+            Log.d("this_is_comp", "inside button onclick lisener")
+            button.setTextColor(resources.getColor(R.color.purple_200))
 
              Toast.makeText(this, "Showing short Toast", Toast.LENGTH_SHORT).show()
         }
