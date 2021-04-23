@@ -21,32 +21,21 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        progressBar = findViewById(R.id.progressBar)
         val button  = findViewById<Button>(R.id.button)
 
         button.setOnClickListener {
-            Toast.makeText(this, "sdsd", Toast.LENGTH_SHORT).show()
+           
 
-            Log.d("saa", "sdsd")
+            Log.d("Asyctask_test_tag", "Button is clicked")
             button.setTextColor(resources.getColor(R.color.black))
+             
+             Toast.makeText(this, "Showing short Toast", Toast.LENGTH_SHORT).show()
         }
 
 
         val image  = findViewById<ImageView>(R.id.image)
-        val newScope = CoroutineScope(Dispatchers.Main)
 
 
-
-
-
-
-
-
-
-//    button.setOnClickListener {
-//        Thread.sleep(1000)
-//        Toast.makeText(this, "finished", Toast.LENGTH_SHORT).show()
-//    }
 
         val tg = ThreadGroup("new Group")
         val thread = Thread(tg, object: Runnable {
@@ -62,41 +51,6 @@ class MainActivity : AppCompatActivity() {
         })
 
         thread.start()
-//
-//
-//        newScope.launch(Dispatchers.Default) {
-//            Log.d("asyncTest", "onPreExecute  ${Thread.currentThread()}")
-//            var input = 15
-//
-//            withContext(Dispatchers.IO) {
-//                while (input <= 100) {
-//
-//                    progressBar.visibility = View.GONE
-//                    progressBar.layoutParams.height = 20
-//                    image.setImageResource(R.drawable.ic_launcher_background)
-//
-//                    button.performClick()
-//                    delay(1000)
-//                    Log.d("asyncTest", "inside iteration, ${Thread.currentThread()}")
-//                    input += 10
-//
-//                    withContext(Dispatchers.Main) {
-//                        updateProgress(input)
-//                    }
-//                }
-//            }
-//        }
-////
-//        newScope.launch {
-//            Log.d("asyncTest", "another cooroutine")
-//
-//        }
-//
-
-//        val myAsync = MyAsync(this)
-//        myAsync.execute(15)
-
-
     }
 
     override fun onResume() {
