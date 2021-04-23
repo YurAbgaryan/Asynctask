@@ -1,5 +1,6 @@
 package com.yur.asynctask
 
+import android.graphics.Color
 import android.icu.lang.UCharacter.GraphemeClusterBreak.L
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -25,6 +26,9 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             Toast.makeText(this, "sdsd", Toast.LENGTH_SHORT).show()
+
+            Log.d("saa", "sdsd")
+            button.setTextColor(resources.getColor(R.color.black))
         }
 
 
